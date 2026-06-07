@@ -1,0 +1,13 @@
+{{ define "name" }} Home {{ end }}
+
+{{ define "main" }}
+    {{ range .Posts }}
+        <article>
+            <h2>
+                <a href="#">{{ .Time }}</a>
+            </h2>
+            <p> {{ .Body }} </p>
+            <p> ({{ .Tone }}) </p>
+        </article>
+    {{ end }}
+{{ end }}

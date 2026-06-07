@@ -1,0 +1,24 @@
+{{ define "_base.html" }}
+    <!doctype html>
+    <html>
+        <head>
+            <title>{{ .Conf.name }} · {{ block "name" . }}{{ end }}</title>
+        </head>
+
+        <body>
+            <header>
+                <h1>
+                    <a href="/">{{ .Conf.name }}</a>
+                </h1>
+            </header>
+
+            <section>
+                {{ block "main" . }}{{ end }}
+            </section>
+
+            <footer>
+                <p>&copy; {{ .Conf.author }} 2026.</p>
+            </footer>
+        </body>
+    </html>
+{{ end }}
